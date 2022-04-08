@@ -23,8 +23,8 @@ Spring 的 IOC 就是创建了这3个东西的过程，而在处理这个过程�
 -- 好像仅此而已了，过程主线就是这样子的，但是它又对这些步骤进行了细化，加上了一些before do after之类的时机，便于扩展，具体的请看上面链接的图哈
 
 扩展点
-1 Bean对象实现 Aware 接口 可以使我们的 Bean 拥有 Spring 内置的一些对象，具体请看 aware 模块的 README.md
-2 实现 BeanDefinitionRegistryPostProcessor 接口，实现不使用 @Component 之类的注解也可以注入 Bean，具体请看 bdrpp 模块的README.md
+1. Bean对象实现 Aware 接口 可以使我们的 Bean 拥有 Spring 内置的一些对象，具体请看 aware 模块的 README.md
+2. 实现 BeanDefinitionRegistryPostProcessor 接口，实现不使用 @Component 之类的注解也可以注入 Bean，具体请看 bdrpp 模块的README.md
 
 
 
