@@ -1,0 +1,16 @@
+## BeanDefinitionRegistryPostProcessor 扩展
+
+## 什么是 BeanDefinitionRegistryPostProcessor？
+看类图可以发现， 它就是 BeanFactoryPostProcessor 接口的一个子接口，除了继承自 BeanDefinitionRegistryPostProcessor 的方法，它自己就一个方法，就是public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry)
+## 那么 BeanDefinitionRegistryPostProcessor 干啥的？
+简而言之，BeanDefinitionRegistryPostProcessor 接口的方法 postProcessBeanDefinitionRegistry 就是用来进行 BeanDefinition 的注册的。
+BeanDefinitionRegistryPostProcessor 有一个子类 叫做 ConfigurationClassPostProcessor ，查看这个类的 postProcessBeanDefinitionRegistry 方法，可以看到这个类会去扫描我们的配置类，然后根据配置类的类路径，扫描配置类相同类路径下的所有类，解析他们的注解，从而生成 BeanDefinition 放入 BeanFactory，可以自行断点进去看看哦
+另外说明一下，ConfigurationClassPostProcessor 是一个非常非常重要的类，是属于 Spring 的内部类， SpringBoot 在创建上下文的时候会创建AnnotatedBeanDefinitionReader，在AnnotatedBeanDefinitionReader的构造方法内，会调用AnnotationConfigUtils.registerAnnotationConfigProcessors(this.registry)，进行注册ConfigurationClassPostProcessor，如果是 Spring 是用 xml 配置的方式，则是在 obtainFreshBeanFactory 的时候使用 loadBeanDefinitions 这个方法调用AnnotationConfigUtils.registerAnnotationConfigProcessors(this.registry)进行注册
+ConfigurationClassPostProcessor 除了干了扫描的工作，SpringBoot 的自动装配也是在这边玩的哦，就是去扫描到很多的 configuration 然后帮我们进行启动。
+
+## 本例子说明
+这个例子就是写了一个类实现了 BeanDefinitionRegistryPostProcessor，然后注册进去了一个 User 实例，使用场景是什么呢？笔者遇到的是
+1. 如果一个类是来自第三方的，而你又想要把它用 Spring 进行管理 那么就可以用这种方式注入，当然，你也可以搞一个配置类然后使用 @Bean 的方式来玩
+2. 这么一个场景，一个工具类有多个实例，但是他们的属性不同，创建Bean的时候需要读取配置文件进行设置，也可以用 BeanDefinitionRegistryPostProcessor 来玩，所以我的例子里面对User进行了赋值哦～
+
+ 
