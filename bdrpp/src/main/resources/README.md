@@ -14,3 +14,5 @@ ConfigurationClassPostProcessor 除了干了扫描的工作，SpringBoot 的自�
 2. 这么一个场景，一个工具类有多个实例，但是他们的属性不同，创建Bean的时候需要读取配置文件进行设置，也可以用 BeanDefinitionRegistryPostProcessor 来玩，所以我的例子里面对User进行了赋值哦～
 
  
+
+
