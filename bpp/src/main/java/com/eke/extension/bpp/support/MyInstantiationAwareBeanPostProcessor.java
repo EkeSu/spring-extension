@@ -1,6 +1,6 @@
-package com.eke.extension.bp.support;
+package com.eke.extension.bpp.support;
 
-import com.eke.extension.bp.entity.User;
+import com.eke.extension.bpp.entity.User;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.stereotype.Component;

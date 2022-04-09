@@ -12,7 +12,7 @@
         <module>aware</module>
         <module>bfpp</module>
         <module>bdrpp</module>
-        <module>bp</module>
+        <module>bpp</module>
     </modules>
 
     <properties>
