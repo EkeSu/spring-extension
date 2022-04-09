@@ -1,4 +1,4 @@
-package com.eke.aware.entity;
+package com.eke.extension.aware.entity;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

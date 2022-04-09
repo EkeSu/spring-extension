@@ -1,8 +1,8 @@
-package com.eke.aware;
+package com.eke.extension.aware;
 
-import com.eke.aware.entity.User;
-import com.eke.aware.support.ApplicationContextUtil;
-import com.eke.aware.support.EnvironmentUtil;
+import com.eke.extension.aware.entity.User;
+import com.eke.extension.aware.support.ApplicationContextUtil;
+import com.eke.extension.aware.support.EnvironmentUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

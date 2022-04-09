@@ -1,4 +1,4 @@
-package com.eke.bdrpp.entity;
+package com.eke.extension.bdrpp.entity;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.eke.aware.support;
+package com.eke.extension.aware.support;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

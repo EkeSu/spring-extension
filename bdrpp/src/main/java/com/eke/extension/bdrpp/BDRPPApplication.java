@@ -1,4 +1,4 @@
-package com.eke.bdrpp;
+package com.eke.extension.bdrpp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

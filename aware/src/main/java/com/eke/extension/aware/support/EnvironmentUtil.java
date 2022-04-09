@@ -1,4 +1,4 @@
-package com.eke.aware.support;
+package com.eke.extension.aware.support;
 
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;

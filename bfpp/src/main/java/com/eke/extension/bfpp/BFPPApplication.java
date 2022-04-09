@@ -1,7 +1,7 @@
-package com.eke.bfpp;
+package com.eke.extension.bfpp;
 
-import com.eke.bfpp.entity.Boss;
-import com.eke.bfpp.entity.Worker;
+import com.eke.extension.bfpp.entity.Worker;
+import com.eke.extension.bfpp.entity.Boss;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,6 +1,6 @@
-package com.eke.bfpp.support;
+package com.eke.extension.bfpp.support;
 
-import com.eke.bfpp.entity.Boss;
+import com.eke.extension.bfpp.entity.Boss;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;

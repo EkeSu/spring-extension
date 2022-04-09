@@ -1,4 +1,4 @@
-package com.eke.bfpp.entity;
+package com.eke.extension.bfpp.entity;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

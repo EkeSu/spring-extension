@@ -1,6 +1,6 @@
-package com.eke.bdrpp.support;
+package com.eke.extension.bdrpp.support;
 
-import com.eke.bdrpp.entity.User;
+import com.eke.extension.bdrpp.entity.User;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;

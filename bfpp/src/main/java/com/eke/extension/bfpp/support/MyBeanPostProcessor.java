@@ -1,4 +1,4 @@
-package com.eke.bfpp.support;
+package com.eke.extension.bfpp.support;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
