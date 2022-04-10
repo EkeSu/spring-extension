@@ -13,6 +13,7 @@
         <module>bfpp</module>
         <module>bdrpp</module>
         <module>bpp</module>
+        <module>factorybean</module>
     </modules>
 
     <properties>

@@ -32,6 +32,9 @@ MergedBeanDefinitionPostProcessor 被调用的位置：doCreateBean 方法内会
 上面是创建 doCreateBean 的一个比较粗糙的逻辑过程，而我们的 MergedBeanDefinitionPostProcessor 方法调用就在【步骤1】之后。
 加一个小小的说明 CommonAnnotationBeanPostProcessor 是 MergedBeanDefinitionPostProcessor 一个比较重要的子类哦，它会去解析 @Autowired @Resource @PostConstruct @PreDestory  等注解，然后把元数据信息记入 BeanDefinition 内便于后续处理哦
 
+### 4. (GenericBPPApplication) 使用 BeanPostProcessor 接口在对象初始化调用 init-method 方法或者 InitializingBean 接口方法前后实现扩展
+看demo就可以了哦，哈哈，它的执行位置是上面提到的 doCreateBean 方法执行流程的 3-2 和 3-4 哦
+不过有一点需要强调一下的，就是我们的 BeanPostProcessor 有一个重要的子类 AbstractAutoProxyCreator， Spring 大名顶顶的 AOP 就是在这个时机点实现的哦，里面会使用动态代理创建出来一个代理类，如果一个类是需要被代理的话，那么大佬们会发现，在执行 doCreateBean 方法中，执行完 initializeBean 方法返回的 bean 对象已经和 populateBean 对象不是同一个了。
     
 
 
