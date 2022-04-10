@@ -11,10 +11,10 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @Date：2022/4/9
  */
 @SpringBootApplication
-public class BPPApplication {
+public class BPPCreateAndDestoryApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = SpringApplication.run(BPPApplication.class, args);
+        ConfigurableApplicationContext ctx = SpringApplication.run(BPPCreateAndDestoryApplication.class, args);
         User bean = ctx.getBean(User.class);
         Object user = ctx.getBeanFactory().getSingleton("user");
         System.out.println(user);
