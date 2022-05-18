@@ -12,6 +12,8 @@ spring有哪一些扩展点呢，该如何应用？这是关于spring基础上�
 2. 实现 BeanDefinitionRegistryPostProcessor 接口，实现不使用 @Component 之类的注解也可以注入 Bean，具体请看 bdrpp 模块的README.md
 3. 实现 BeanFactoryPostProcessor 接口，对 BeanFactory 为所欲为 具体请看 bfpp 模块的 README.md 哦
 4. 实现 BeanPostProcessor 接口或其子接口，对 Bean 对创建前后实现扩展或者使用 BeanPostProcessor 直接创建 Bean，具体请看 bpp 模块的 README.md 哦
+5. 实现 FactoryBean 接口自己创建复杂的 Bean；
+6. 利用 SpringBoot 的自动装配自己写一个 starter；
 
 
 ### 插句话 面向过程与面向对象的关系
